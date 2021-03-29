@@ -1,0 +1,40 @@
+{
+  "new": [
+    {
+      "id": 1,
+      "name": "BACKPACK",
+      "price": 1299,
+      "imgName": "new1.png"
+    },
+    {
+      "id": 2,
+      "name": "HANDY PURSE",
+      "price": 1299,
+      "imgName": "new2.png"
+    },
+    {
+      "id": 3,
+      "name": "SUN GLASSES",
+      "price": 1299,
+      "imgName": "new3.png"
+    },
+    {
+      "id": 4,
+      "name": "SMART WATCH",
+      "price": 1299,
+      "imgName": "new4.png"
+    },
+    {
+      "id": 5,
+      "name": "MEN'S WALLET",
+      "price": 1299,
+      "imgName": "new5.png"
+    },
+    {
+      "id": 6,
+      "name": "HANDBAG",
+      "price": 1299,
+      "imgName": "new6.png"
+    }
+  ]
+}
