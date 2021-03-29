@@ -1,0 +1,89 @@
+<style>
+  .banner{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+</style>
+<body style="margin: 0;padding: 0;" >
+  <div class="banner">
+    <video autoplay muted loop >
+      <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4">
+    </video>
+  
+  
+    <div class="card card-body" style="width: 400px;
+    max-width: 400px;
+    height: 550px;
+    margin: 1rem;
+    padding: 2rem;box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background: rgb(20, 20, 20);">
+      <h1 style ="color: #fff;font-size: 28px;"class="text-center mb-3">
+        <i class="fas fa-user-plus"></i> Register
+      </h1>
+      <%- include('./partials/messages'); %>
+      <form action="/users/register" method="POST">
+        <div class="form-group">
+          <label style="color: #fff;"for="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label style="color: #fff;"for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label style="color: #fff;"for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Create Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label style="color: #fff;"for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block"style="background:rgb(28, 97, 224);">
+          Register
+        </button>
+      </form>
+      <p style="color: #fff;"class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+    </div>
+  </div>
+</div>

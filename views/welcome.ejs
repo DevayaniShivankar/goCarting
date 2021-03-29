@@ -1,0 +1,89 @@
+
+<style>
+.banner{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+</style>
+<body style="margin: 0;padding: 0;" >
+  <div class="banner">
+  <video autoplay muted loop >
+    <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4">
+  </video>
+
+
+  
+  
+    <div class="card card-body text-center" style="width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background: rgb(20, 20, 20);
+    top: 120px;">
+      <h1 style="font-family: 'Aclonica';font-size: 30px;
+      color: rgb(69, 148, 137);">goCarting</h1>
+      <p style="color:#fff;">Create an account or login</p>
+      <a id="myBtn" onclick="myFunction()"href="/users/register" style="width: 100%;
+      padding: 5px;
+      margin-top: 24px;
+      font-weight: bold;
+      border-radius: 4px;
+      font-size: 22px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #fff;
+      cursor: pointer;
+      background: rgb(28, 97, 224);"
+        >Sign Up</a
+      >
+      <a id="myBtn" onclick="myFunction()"href="/users/login" style="width: 100%;
+      padding: 5px;
+      margin-block: 5px;
+      font-weight: bold;
+      font-size: 22px;
+      font-family: 'Times New Roman', Times, serif;
+      color:#fff;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background:rgb(28, 97, 224);">Login</a>
+    </div>
+ 
+</div>
+</div>
+
+<script>
+  // Get the video
+  var video = document.getElementById("myVideo").playbackRate=2.2;
+  
+  // Get the button
+  var btn = document.getElementById("myBtn");
+  
+  // Pause and play the video, and change the button text
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
+    }
+  }
+  </script>
+
+</body>

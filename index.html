@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/fullpage.min.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
+    rel="stylesheet"
+  />
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+</head>
+<body>
+    <div id="fullpage">
+        <section class="section s1">
+            <header class="header-1">
+                <nav class="nav bd-grid">
+                    <div>
+                        <a href="#" class="nav__logo">goCarting</a>
+                    </div>
+                    
+    
+                    
+                <div class="nav__menu" id="nav-menu">
+                  <ul class="nav__list">
+                      <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                      <li class="nav__item"><a href="./feature.html" class="nav__link">Featured</a></li>
+                      <li class="nav__item"><a href="#new" class="nav__link">New</a></li>
+                      <li class="nav__item"><a href="#subscribed" class="nav__link">Subscribed</a></li>
+                  </ul>
+              </div>
+                    <div class="nav__user">
+                        <ul>
+                            <li><a href="./views/dashboard.ejs">User:</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <i class="bx bx-cart nav__cart"></i>
+                        <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
+                    </div>
+                </nav>
+            </header>
+            <main class="main-1">
+                <!--===== HOME =====-->
+                <section class="home" id="home">
+                    <div class="home__container bd-grid">
+                        <div class="home__data">
+                            <h1 class="home__title">NEW<br><span>ARRIVALS</span></h1>
+                            <a href="#featured" class="button">GO SHOPPING</a>
+                        </div>
+    
+                        <img src="./bg.jpg" alt="imageUnavailable" class="home__img">
+                    </div>
+                    
+                </section>
+        </section>
+        <!--===== COLLECTION =====-->
+        <section class="collection section">
+          <div class="collection__container bd-grid">
+              <div class="collection__box">
+                  <img src="./images/projects/men3.jpg" alt="imageUnavailable" class="collection__img">
+
+                  <div class="collection__data">
+                      <h2 class="collection__title"><span class="collection__subtitle">Men</span><br>clothing</h2>
+                      <a href="#" class="collection__view">View collection</a>
+                  </div>
+              </div>
+
+              <div class="collection__box">
+                  <div class="collection__data">
+                      <h2 class="collection__title"><span class="collection__subtitle">Women</span><br>clothing</h2>
+                      <a href="#" class="collection__view">View collection</a>
+                  </div>
+
+                  <img src="./wdress.jpg" alt="imageUnavailable" class="collection__img">
+              </div>
+          </div>
+      </section>
+
+
+      <!--===== FEATURED PRODUCTS =====-->
+      <section class="featured section" id="featured">
+        <h2 class="section-title">FEATURED PRODUCTS</h2>
+        <a href="#" class="section-all">View All</a>
+
+        <div class="featured__container bd-grid">
+            <div class="featured__product">
+                <div class="featured__box">
+                    <div class="featured__new">NEW</div>
+                    <img src="assets/imgs/featured1.jpg" alt="imageUnavailable" class="featured__img">
+                </div>
+            
+
+                <div class="featured__data">
+                    <h3 class="featured__name">All-new Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)</h3>
+                    <span class="featured__price">7,999/-</span>
+                </div>
+            </div>
+
+            <div class="featured__product">
+                <div class="featured__box">
+                    <div class="featured__new">NEW</div>
+                    <img src="assets/imgs/featured2.jfif" alt="imageUnavailable" class="featured__img">
+                </div>
+            
+
+                <div class="featured__data">
+                    <h3 class="featured__name">Apple MV7N2HN/A Airpods With Charging Case</h3>
+                    <span class="featured__price">19,999/-</span>
+                </div>
+            </div>
+
+            <div class="featured__product">
+                <div class="featured__box">
+                    <div class="featured__new">NEW</div>
+                    <img src="assets/imgs/featured3.jpg" alt="imageUnavailable" class="featured__img">
+                </div>
+            
+
+                <div class="featured__data">
+                    <h3 class="featured__name">OnePlus Nord 5G (Blue Marble, 12GB RAM, 256GB Storage)</h3>
+                    <span class="featured__price">29,999/-</span>
+                </div>
+            </div>
+
+            <div class="featured__product">
+                <div class="featured__box">
+                    <div class="featured__new">NEW</div>
+                    <img src="assets/imgs/featured4.jpg" alt="imageUnavailable" class="featured__img">
+                </div>
+            
+
+                <div class="featured__data">
+                    <h3 class="featured__name">New Apple iPhone 12 Pro Max (128GB) - Graphite</h3>
+                    <span class="featured__price">1,29,999/-</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <div class="intro">
+        <div class="intro-text">
+          <h1 class="hide">
+            <span class="text">Choose your</span>
+          </h1>
+          <h1 class="hide">
+            <span class="text">favourite</span>
+          </h1>
+          <h1 class="hide">
+            <span class="text">style!</span>
+          </h1>
+        </div>
+      </div>
+    <div class="slider"></div>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"
+  ></script>
+   
+    <script src="./animate.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
