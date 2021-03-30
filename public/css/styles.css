@@ -304,6 +304,15 @@ img {
   font-size: var(--small-font-size);
 }
 
+.shop-item-price {
+  display: inline-block;
+  color: var(--second-color);
+  padding: 1rem;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-bold);
+  transition: .3s;
+}
+
 .featured__data {
   text-align: center;
 }

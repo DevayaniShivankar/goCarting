@@ -28,7 +28,7 @@ function ready() {
 
 var stripeHandler = StripeCheckout.configure({
     key: stripePublicKey,
-    locale: 'en',
+    locale: 'auto',
     token: function(token) {
         var items = []
         var cartItemContainer = document.getElementsByClassName('cart-items')[0]
@@ -100,6 +100,7 @@ function addToCartClicked(event) {
     var id = shopItem.dataset.itemId
     addItemToCart(title, price, imageSrc, id)
     updateCartTotal()
+    alert("Item added to cart")
 }
 
 function addItemToCart(title, price, imageSrc, id) {

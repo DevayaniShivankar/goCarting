@@ -33,13 +33,13 @@ app.post('/purchase', function(req, res) {
       res.status(500).end()
     } else {
       const itemsJson = JSON.parse(data)
-      const itemsArray = itemsJson.music.concat(itemsJson.merch)
+      const itemsArray = itemsJson.new.concat(itemsJson.featured)
       let total = 0
       req.body.items.forEach(function(item) {
         const itemJson = itemsArray.find(function(i) {
           return i.id == item.id
         })
-        total = total + itemJson.price * item.quantity
+        total = total + item.price*item.quantity
       })
 
       stripe.charges.create({
@@ -57,6 +57,6 @@ app.post('/purchase', function(req, res) {
   })
 })
 
-app.listen(3000, function(){
+app.listen(4242, function(){
   console.log("goCarting server is up and running....")
 })
