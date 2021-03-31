@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>goCarting</title>
+        <!-- ===== BOXICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== SCRIPTS ===== -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/dev.css">
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script>
+            var stripePublicKey = '<%= stripePublicKey %>'
+        </script>
+        <script src="store.js" defer></script>
+    </head>
+
+    <body>
+        <header class="header-1">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="index.html" class="nav__logo">GoCarting</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#featured" class="nav__link">Featured</a></li>
+                        <li class="nav__item"><a href="#new" class="nav__link">New</a></li>
+                        <li class="nav__item"><a href="#subscribed" class="nav__link">Subscribed</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <a href="#cart" class="cart"><i class="bx bx-cart nav__cart"></i></a>
+                    <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main-1">
+
+            <section class="featured section" id="featured">
+                <h2 class="section-title">FEATURED PRODUCTS</h2>
+                <a href="#" class="section-all">View All</a>
+
+                <div class="featured__container bd-grid">
+                    <% items.featured.forEach(function(item){ %>
+                    <div class="featured__product ">
+                        <div class="featured__box">
+                            <div class="featured__new">NEW</div>
+                            <img src="imgs/<%= item.imgName %>" alt="imageUnavailable" class="featured__img shop-item-image">
+                        </div>
+                        
+                    
+                        <div class="featured__data">
+                            <h3 class="featured__name shop-item-title"><%= item.name %></h3>
+                            <span class="featured__price shop-item-price">$<%= item.price %></span>
+                        </div>
+                            <button class="button shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                    <% }) %>
+                </section>
+
+            <section class="featured section" id="new">
+                <h2 class="section-title">NEW ARRIVALS</h2>
+                <a href="#" class="section-all">View All</a>
+    
+                <div class="new__container bd-grid">
+                    <% items.new.forEach(function(item){ %>
+                    <div class="new__box">
+                        <span class="shop-item-title featured__new"><%= item.name %></span>
+                        <img src="imgs/<%= item.imgName %>" alt="ImageUnavailable" class="new__img shop-item-image">
+                        <div class="new__link">
+                            <span class="shop-item-price">Rs.<%= item.price %></span>
+                            <a href="<%= item.devFile %>"class="button" type="button">View Product</a>
+                        </div>
+                    </div>
+                    <% }) %>
+    
+                </div>
+            </section>
+
+            <section class="cart section">
+                <h2 class="section-title">CART</h2>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+                <button class="button btn-purchase" type="button">PURCHASE</button>
+            </section>
+        </main>
+        <script src="js/main.js"></script>
+        <script src="store.js" defer></script>
+        <script src="js/dev.js"></script>
+    </body>   
+</html>>
