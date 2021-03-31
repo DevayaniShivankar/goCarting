@@ -1,0 +1,72 @@
+{
+  "new": [
+    {
+      "id": 1,
+      "name": "BACKPACK",
+      "price": 4500,
+      "imgName": "new1.png",
+      "devFile":"dev.html"
+    },
+    {
+      "id": 2,
+      "name": "HANDY PURSE",
+      "price": 2000,
+      "imgName": "new2.png",
+      "devFile":"dev1.html"
+    },
+    {
+      "id": 3,
+      "name": "SUN GLASSES",
+      "price": 999,
+      "imgName": "new3.png",
+      "devFile":"dev2.html"
+    },
+    {
+      "id": 4,
+      "name": "SMART WATCH",
+      "price": 6000,
+      "imgName": "new4.png",
+      "devFile":"dev3.html"
+    },
+    {
+      "id": 5,
+      "name": "MEN'S WALLET",
+      "price": 1700,
+      "imgName": "new5.png",
+      "devFile":"dev4.html"
+    },
+    {
+      "id": 6,
+      "name": "HANDBAG",
+      "price": 8000,
+      "imgName": "new6.png",
+      "devFile":"dev5.html"
+    }
+  ],
+  "featured": [
+    {
+      "id": 7,
+      "name": "All-new Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)",
+      "price": 1299,
+      "imgName": "featured1.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Apple MV7N2HN/A Airpods With Charging Case",
+      "price": 1299,
+      "imgName": "featured2.jfif"
+    },
+    {
+      "id": 9,
+      "name": "OnePlus Nord 5G (Blue Marble, 12GB RAM, 256GB Storage)",
+      "price": 1299,
+      "imgName": "featured3.png"
+    },
+    {
+      "id": 10,
+      "name": "New Apple iPhone 12 Pro Max (128GB) - Graphite",
+      "price": 1299,
+      "imgName": "featured4.jpg"
+    }
+  ]
+}
