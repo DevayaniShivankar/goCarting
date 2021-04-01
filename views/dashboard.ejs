@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goCarting</title>
+</head>
+<style>
+   *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            background:#eee;
+            font-family:sans-serif;
+        }
+        
+        .banner-area{
+            width:100%;
+            height:100vh;
+            background:"<%= images.image %>";
+            background-size:cover;
+        }        
+        
+        .content-area{
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+       .content{
+            text-align: center;
+        }
+        
+        .content h1{
+            font-size:80px;
+            color:rgb(69, 148, 137);
+        }
+        .content h1 font{
+            font-size:80px;
+            color: black;
+        }
+        
+        .content p{
+            font-size:30px;
+            color:#ddd;
+        }
+        
+        .content .btn{
+        	display: inline-block;
+            border:none;
+            outline:none;
+            text-decoration:none;
+            padding:15px;
+            margin-top:100px;
+            border-radius: 4px;
+            color:#eee;
+            font-size: 18px;
+            cursor: pointer;    
+            background:#F44336;             
+        }
+        
+</style>
+<body>
+    <div class="banner-area">
+        <div class="content-area">
+           <div class="content">
+              <h1>Welcome<br/>  <font><%= user.name %></font></h1>
+              <a class="btn" href="home.html">Shop Now</a>
+           </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+       const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+tl.fromTo(".content h1",{x:-100}, {duration: 1, x: 0});
+tl.fromTo(".content .btn", { opacity: 0 }, { opacity: 1, duration: 0.9 },"-=0.5");
+
+  </script>
+    
+    
+</body>
+</html>
+

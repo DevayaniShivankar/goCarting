@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+
+        <!-- ===== BOXICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        
+
+        <title>goCarting</title>
+        
+
+        <!-- ===== CSS ===== -->
+        <script>
+            var stripePublicKey = '<%= stripePublicKey %>'
+        </script>
+        <script src="store.js" defer></script>
+        <script type="text/javascript" src="items.json"></script>
+        <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script src="js/JQuery.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="js/lightslider.js"></script>
+        <link rel="stylesheet" href="css/lightslider.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="header-1">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo" style="font-family: 'Aclonica';font-size: 25px;font-weight: bolder;
+                    color: rgb(69, 148, 137);">goCarting</a>
+                </div>
+                
+        
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#featured" class="nav__link">Featured</a></li>
+                        <li class="nav__item"><a href="#new" class="nav__link">New</a></li>
+                        <li class="nav__item"><a href="#subscribe" class="nav__link">Subscribe</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div class="right-menu">
+                    <a href="/users/logout" class="btn btn-secondary"style="background:#E55947;font-size:10px;">Logout</a>
+                    <a href="javascript:void(0);" class="search">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a >
+                        <i class="fas fa-shopping-cart">
+                            <span class="num-cart-product">0</span>
+                        </i>
+                    </a>
+                </div>
+                <div class="search-bar">
+        
+                    <!--search-input------->
+                    <div class="search-input">
+                    <input type="text" placeholder="Search For Product" name="search" />
+                    <!--cancel-btn--->
+                    <a href="javascript:void(0);" class="search-cancel">
+                        <i class="fas fa-times"></i>
+                    </a>
+                
+                </div>
+                </div>
+              
+                
+            </nav>
+        </header>
+        
+        <main class="main-1">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <div class="home__data">
+                        <h1 class="home__title">BUY<br><span>WHAT YOU </br>LIKE</span></h1>
+                        <a href="/store" class="button">GO SHOPPING</a>
+                    </div>
+        
+                    <img src="imgs/home.png" alt="imageUnavailable" class="home__img">
+                </div>
+            </section>
+        
+            <!--===== COLLECTION =====-->
+            <section class="collection section">
+                <div class="collection__container bd-grid">
+                    <div class="collection__box">
+                        <img src="imgs/men3.jpg" alt="imageUnavailable" style="height: 90%;"class="collection__img">
+        
+                        <div class="collection__data">
+                            <h2 class="collection__title"><span class="collection__subtitle">Men</span><br>clothing</h2>
+                            <a href="#" class="collection__view">View collection</a>
+                        </div>
+                    </div>
+        
+                    <div class="collection__box">
+                        <div class="collection__data">
+                            <h2 class="collection__title"><span class="collection__subtitle">Women</span><br>clothing</h2>
+                            <a href="#" class="collection__view">View collection</a>
+                        </div>
+        
+                        <img src="imgs/wbg.jpg" alt="imageUnavailable" class="collection__img">
+                    </div>
+                </div>
+            </section>
+        
+            <!--===== FEATURED PRODUCTS =====-->
+            <section class="featured section" id="featured">
+                <h2 class="section-title">FEATURED PRODUCTS</h2>
+                <a href="#featured" class="section-all">View All</a>
+        
+                <div class="featured__container bd-grid">
+                    <div class="featured__product">
+                        <div class="featured__box">
+                            <div class="featured__new">NEW</div>
+                            <img src="imgs/featured1.jpg" alt="imageUnavailable" class="featured__img">
+                        </div>
+                    
+        
+                        <div class="featured__data">
+                            <h3 class="featured__name">All-new Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)</h3>
+                            <span class="featured__price">$299</span>
+                        </div>
+                    </div>
+        
+                    <div class="featured__product">
+                        <div class="featured__box">
+                            <div class="featured__new">NEW</div>
+                            <img src="imgs/featured2.jfif" alt="imageUnavailable" class="featured__img">
+                        </div>
+                    
+        
+                        <div class="featured__data">
+                            <h3 class="featured__name" >Apple MV7N2HN/A Airpods With Charging Case</h3>
+                            <span class="featured__price">$199</span>
+                        </div>
+                    </div>
+        
+                    <div class="featured__product">
+                        <div class="featured__box">
+                            <div class="featured__new">NEW</div>
+                            <img src="imgs/featured3.png" alt="imageUnavailable" class="featured__img">
+                        </div>
+                    
+        
+                        <div class="featured__data">
+                            <h3 class="featured__name">OnePlus Nord 5G (Blue Marble, 12GB RAM, 256GB Storage)</h3>
+                            <span class="featured__price">$499</span>
+                        </div>
+                    </div>
+        
+                    <div class="featured__product">
+                        <div class="featured__box">
+                            <div class="featured__new">NEW</div>
+                            <img src="imgs/featured4.jpg" alt="imageUnavailable" class="featured__img">
+                        </div>
+                    
+        
+                        <div class="featured__data">
+                            <h3 class="featured__name">New Apple iPhone 12 Pro Max (128GB) - Graphite</h3>
+                            <span class="featured__price">$1299-</span>
+                        </div>
+                    </div>
+                    <div class="featured__product">
+                        <div class="featured__box">
+                            <div class="featured__new">NEW</div>
+                            <img src="imgs/featured7.jpg" alt="imageUnavailable" class="featured__img">
+                        </div>
+                    
+        
+                        <div class="featured__data">
+                            <h3 class="featured__name">Beats by Dr. Dre Solo3 Wireless Headphone,Gloss Blue</h3>
+                            <span class="featured__price">$259</span>
+                        </div>
+                    </div>
+                    
+                        <div class="featured__product">
+                            <div class="featured__box">
+                                <div class="featured__new">NEW</div>
+                                <img src="imgs/featured10.jpg" alt="imageUnavailable" class="featured__img">
+                            </div>
+                        
+        
+                            <div class="featured__data">
+                                <h3 class="featured__name">Smart Wireless Home Security Camera India 2021</h3>
+                                <span class="featured__price">$2699</span>
+                            </div>
+                        </div>
+                            <div class="featured__product">
+                                <div class="featured__box">
+                                    <div class="featured__new">NEW</div>
+                                    <img src="imgs/featured8.jpg" alt="imageUnavailable" class="featured__img">
+                                </div>
+                            
+        
+                                <div class="featured__data">
+                                    <h3 class="featured__name">Elegant Microsoft Surface-Book 2</h3>
+                                    <span class="featured__price">$4599</span>
+                                </div>
+                            </div>
+                            <div class="featured__product">
+                                <div class="featured__box">
+                                    <div class="featured__new">NEW</div>
+                                    <img src="imgs/featured9.jpg" alt="imageUnavailable" class="featured__img">
+                                </div>
+                            
+        
+                                <div class="featured__data">
+                                    <h3 class="featured__name">Realme Note 9 Pro Long Battery,64GB RAM</h3>
+                                    <span class="featured__price">$379</span>
+                                </div>
+                            </div>
+                </div>
+            </section>
+        
+            <!--===== OFFER =====-->
+            <ul id="lightSlider">
+                <li class="item-a">
+                    
+                    <!---box------------------->
+                    <div class="full-slider-box f-slide-1">
+                    <div class="f-slider-text-container">
+                        <div class="f-slider-text">
+                            <span>Limited Offer</span>
+                            <strong>30% Off<br/> With <font>Promo Code</font></strong>
+                            <a href="#" class="f-slider-btn">Shop Now</a>
+                        </div>
+                        </div>
+                    </div>
+                   </li>
+                <li class="item-b">
+                    
+                    <!---box------------------->
+                    <div class="full-slider-box f-slide-2">
+                    <div class="f-slider-text-container">
+                        <div class="f-slider-text">
+                            <span>Limited Offer</span>
+                            <strong>30% Off<br/> With <font>Promo Code</font></strong>
+                            <a href="#" class="f-slider-btn">Shop Now</a>
+                        </div>
+                        </div>
+                    </div></li>
+                <li class="item-c">
+                    
+                    <!---box------------------->
+                    <div class="full-slider-box f-slide-3">
+                    <div class="f-slider-text-container">
+                        <div class="f-slider-text">
+                            <span>Limited Offer</span>
+                            <strong>30% Off<br/> With <font>Promo Code</font></strong>
+                            <a href="#" class="f-slider-btn">Shop Now</a>
+                        </div>
+                        </div>
+                    </div></li>
+            </ul>
+            
+          
+            <section class="offer section">
+                <div class="offer__bg">
+                    <div class="offer__data">
+                        <h2 class="offer__title">Special Offer</h2>
+                        <p class="offer__description">Special offers and discounts for women only this week</p>
+                        <a href="/store" class="button">SHOP NOW</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        </div>
+        
+            <!--===== NEW ARRIVALS =====-->
+            <section class="new section" id="new">
+                <h2 class="section-title">NEW ARRIVALS</h2>
+                <a href="#" class="section-all">View All</a>
+        
+                <div class="new__container bd-grid">
+                    
+                    <div class="new__box">
+                        <img src="imgs/new1.png" alt="ImageUnavailable" class="new__img">
+                        <div class="new__link">
+                            <a href="dev.html" class="button">View Product</a>
+                        </div>
+                    </div>
+        
+                    <div class="new__box">
+                        <img src="imgs/new2.png" alt="ImageUnavailable" class="new__img">
+                        <div class="new__link">
+                            <a href="dev1.html" class="button">View Product</a>
+                        </div>
+                    </div>
+        
+                    <div class="new__box">
+                        <img src="imgs/new3.png" alt="ImageUnavailable" class="new__img">
+                        <div class="new__link">
+                            <a href="dev2.html" class="button">View Product</a>
+                        </div>
+                    </div>
+        
+                    <div class="new__box">
+                        <img src="imgs/new4.png" alt="ImageUnavailable" class="new__img">
+                        <div class="new__link">
+                            <a href="dev3.html" class="button">View Product</a>
+                        </div>
+                    </div>
+        
+                    <div class="new__box">
+                        <img src="imgs/new5.png" alt="ImageUnavailable" class="new__img">
+                        <div class="new__link">
+                            <a href="dev4.html" class="button">View Product</a>
+                        </div>
+                    </div>
+        
+                    <div class="new__box">
+                        <img src="imgs/new6.png" alt="ImageUnavailable" class="new__img">
+                        <div class="new__link">
+                            <a href="dev5.html" class="button">View Product</a>
+                        </div>
+                    </div>
+        
+                </div>
+            </section>
+        
+            <!--===== NEWSLETTER =====-->
+            <section class="newsletter section" id="subscribe">
+                <div class="newsletter__container bd-grid">
+                    <div class="newsletter__subscribe">
+                        <h2 class="section-title">OUR NEWSLETTER</h2>
+                        <p class="newsletter__description">Promotion new products and sales directly to your</p>
+        
+                        <form action="" class="newsletter__form">
+                            <input type="text" class="newsletter__input" placeholder="Enter your email">
+                            <a href="#" class="button">SUBSCRIBE</a>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        
+            <!--===== SPONSORS =====-->
+            <section class="sponsors section">
+                <div class="sponsors__container bd-grid">
+        
+                    <div class="sponsors__logo">
+                        <img src="imgs/logo1.png" alt="ImageUnavailable">
+                    </div>
+        
+                    <div class="sponsors__logo">
+                        <img src="imgs/logo2.png" alt="ImageUnavailable">
+                    </div>
+        
+                    <div class="sponsors__logo">
+                        <img src="imgs/logo3.png" alt="ImageUnavailable">
+                    </div>
+        
+                    <div class="sponsors__logo">
+                        <img src="imgs/logo4.png" alt="ImageUnavailable">
+                    </div>
+        
+                </div>
+        
+            </section>
+        </main>
+        
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__box">
+                    <h3 class="footer__title">GoCarting</h3>
+                    <p class="footer__deal">Products Store</p>
+                    <a href="#"><img src="imgs/footerstore1.png" alt="" class="footer__store"></a>
+                    <a href="#"><img src="imgs/footerstore2.png" alt="" class="footer__store"></a>
+                </div>
+            
+                <div class="footer__box">
+                    <h3 class="footer__title">EXPLORE</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Home</a></li>
+                        <li><a href="#" class="footer__link">Featured</a></li>
+                        <li><a href="#" class="footer__link">New</a></li>
+                        <li><a href="#" class="footer__link">Subscribed</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer__box">
+                    <h3 class="footer__title">OUR SERVICES</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Pricing</a></li>
+                        <li><a href="#" class="footer__link">Free Shipping</a></li>
+                        <li><a href="#" class="footer__link">Gift cards</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer__box">
+                    <h3 class="footer__title">FOLLOW US</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                        <a href="https://twitter.com/" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="intro">
+                <div class="intro-text">
+                  <h1 class="hide">
+                    <span class="text">Choose your</span>
+                  </h1>
+                  <h1 class="hide">
+                    <span class="text">favourite</span>
+                  </h1>
+                  <h1 class="hide">
+                    <span class="text">style!</span>
+                  </h1>
+                </div>
+              </div>
+            <div class="slider"></div>
+            <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"
+  ></script>
+    
+    
+    
+    
+    
+    <script>
+        $(document).ready(function() {
+        $('#lightSlider').lightSlider({
+            adaptiveHeight:true,
+            auto:true,
+            item:1,
+            slideMargin:0,
+            loop:true
+        });
+    });
+    </script>
+ <script type="text/javascript">
+    $(document).on('click','.search',function(){
+        $('.search-bar').addClass('search-bar-active')
+    });
+
+    $(document).on('click','.search-cancel',function(){
+        $('.search-bar').removeClass('search-bar-active')
+    });
+</script>
+        
+<script src="js/animate.js"></script>
+
+        <script src="js/main.js"></script>
+          <!--using FontAwesome--------------->
+
+
+<!--light-slider-files-->
+
+    </body>
+</html>

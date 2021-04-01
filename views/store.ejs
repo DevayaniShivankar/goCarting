@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <!-- ===== BOXICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+ 
+        <title>goCarting</title>
+        
+ 
+        <!-- ===== CSS ===== -->
+        <script src="https://code.jquery.com/jquery-1.11.0.js" integrity="sha256-zgND4db0iXaO7v4CLBIYHGoIIudWI5hRMQrPB20j0Qw=" crossorigin="anonymous"></script>
+        <script src="js/lightslider.js"></script>
+        <link rel="stylesheet" href="css/lightslider.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script>
+            var stripePublicKey = '<%= stripePublicKey %>'
+        </script>
+        <script src="store.js" defer></script>
+ 
+        <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+    </head>
+ 
+    <body>
+        <header class="header-1">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo" style="font-family: 'Aclonica';font-size: 24px;
+                    color: rgb(69, 148, 137);">goCarting</a>
+                </div>
+ 
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#featured" class="nav__link">Featured</a></li>
+                        <li class="nav__item"><a href="#new" class="nav__link">New</a></li>
+                        <li class="nav__item"><a href="#subscribed" class="nav__link">Subscribed</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <a href="#cart" class="cart"><i class="bx bx-cart nav__cart"></i></a>
+                    <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
+                </div>
+            </nav>
+        </header>
+ 
+        <main class="main-1">
+ 
+            <section class="featured section" id="featured">
+                <h2 class="section-title">FEATURED PRODUCTS</h2>
+                <a href="#" class="section-all">View All</a>
+ 
+                <div class="featured__container bd-grid">
+                    <% items.featured.forEach(function(item){ %>
+                    <div class="featured__product ">
+                        <div class="featured__box">
+                            <div class="featured__new">NEW</div>
+                            <img src="imgs/<%= item.imgName %>" alt="imageUnavailable" class="featured__img shop-item-image">
+                        </div>
+                        
+                    
+                        <div class="featured__data">
+                            <h3 class="featured__name shop-item-title"><%= item.name %></h3>
+                            <span class="featured__price shop-item-price">$<%= item.price %></span>
+                        </div>
+                            <button class="button shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                    <% }) %>
+                </section>
+
+                 
+            
+          
+            <section class="offer section">
+                <div class="offer__bg">
+                    <div class="offer__data">
+                        <h2 class="offer__title">Special Offer</h2>
+                        <p class="offer__description">Special offers and discounts for women only this week</p>
+                        <a href="/store" class="button">SHOP NOW</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        </div>
+        
+ 
+            <section class="featured section" id="new">
+                <h2 class="section-title">NEW ARRIVALS</h2>
+                <a href="#" class="section-all">View All</a>
+    
+                <div class="new__container bd-grid">
+                    <% items.new.forEach(function(item){ %>
+                    <div class="new__box">
+                        <span class="shop-item-title featured__new"><%= item.name %></span>
+                        <img src="imgs/<%= item.imgName %>" alt="ImageUnavailable" class="new__img shop-item-image">
+                        <div class="new__link">
+                            <span class="shop-item-price">$<%= item.price %></span>
+                            <button class="button shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <% }) %>
+    
+                </div>
+            </section>
+ 
+            <section class="cart section" id="cart">
+                <h2 class="section-title">CART</h2>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+                <button class="button btn-purchase" type="button">PURCHASE</button>
+            </section>
+        </main>
+
+
+        <script>
+            $(document).ready(function() {
+            $('#lightSlider').lightSlider({
+                adaptiveHeight:true,
+                auto:true,
+                item:1,
+                slideMargin:0,
+                loop:true
+            });
+        });</script>
+        <script src="js/main.js"></script>
+        <script src="store.js" defer></script>
+        <script src="js/dev.js"></script>
+    </body>   
+</html>
