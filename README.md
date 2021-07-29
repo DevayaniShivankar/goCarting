@@ -6,7 +6,7 @@ Safe payments with [Stripe API](https://stripe.com/docs/api) with proper login &
 Features:
 1. [Welcome Page (After login)](#welcome-page) 
 2. [Home Page](#home-page)
-3. [View with 3D effect](#view-in-3d-effect)
+3. [View with 3D effect](#view-with-3d-effect)
 4. [Slider for ongoing sales](#slider-for-ongoing-sales)
 5. [Cart](#cart)
 6. [Safe payments via Stripe API](#safe-payments-via-stripe-api)
